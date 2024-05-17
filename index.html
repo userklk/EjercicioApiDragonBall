@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Dragon Ball API</title>
+  
+    <style>
+        body {
+            background-color: orange;
+        }
+        table thead {
+            background:white;
+            color:black;
+        }
+        #data img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        <input type="text" id="personaje" placeholder="Introduce el nombre...">
+                    </th>
+                    <th>
+                        <select id="genero">
+                            <option value="">Todos</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                        </select>
+                    </th>
+                    <th colspan="2">
+                        <button id="buscar">Buscar</button>
+                    </th>
+                </tr>
+                <tr>
+                    
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Raza</th>
+                    <th>Genero</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>      
+        </table>
+
+        <button id="atrasBoton" disabled>Anterior</button>
+        <button id="siguienteBoton">Siguiente</button>
+
+    </div>
+
+    <div id="espacioMostrar">
+        <img src="" alt="" id="mostrarPersonaje" style="display: none;">
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
